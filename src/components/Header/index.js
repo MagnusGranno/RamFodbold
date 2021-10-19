@@ -20,7 +20,7 @@ const Header = () => {
               <a>Hold</a>
             </Navs>
           </Link>
-          <Link to="/sponsorer" className="Link">
+          <Link to="/sponsor" className="Link">
             <Navs>
               <a>Sponsorer</a>
             </Navs>

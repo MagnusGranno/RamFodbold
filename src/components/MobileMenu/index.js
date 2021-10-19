@@ -7,25 +7,35 @@ const MobileMenu = () => {
   return (
     <Wrapper>
       <Menu>
-        <Navs>
-          <a>Hold</a>
-        </Navs>
+        <Link to="/hold" className="Link">
+          <Navs>
+            <a>Hold</a>
+          </Navs>
+        </Link>
 
-        <Navs>
-          <Link to="/kontakt" className="Link">
+        <Link to="/kontakt" className="Link">
+          <Navs>
             <a>Kontakt</a>
-          </Link>
-        </Navs>
+          </Navs>
+        </Link>
 
-        <Navs>
-          <a>Sponsorer</a>
-        </Navs>
-        <Navs>
-          <a>Log ind</a>
-        </Navs>
-        <Navs>
-          <a>Register</a>
-        </Navs>
+        <Link to="/sponsor" className="Link">
+          <Navs>
+            <a>Sponsorer</a>
+          </Navs>
+        </Link>
+
+        <Link to="/login" className="Link">
+          <Navs>
+            <a>Log ind</a>
+          </Navs>
+        </Link>
+
+        <Link to="/Register" className="Link">
+          <Navs>
+            <a>Register</a>
+          </Navs>
+        </Link>
       </Menu>
     </Wrapper>
   );

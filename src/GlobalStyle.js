@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 
-
 export const GlobalStyle = createGlobalStyle`
 
 :root {
@@ -34,6 +33,11 @@ body {
     margin: 0 auto;
 
 
+    @media (max-width: 860px) {
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }
 
 .Link {

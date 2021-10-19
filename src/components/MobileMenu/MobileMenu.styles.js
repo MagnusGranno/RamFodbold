@@ -28,6 +28,23 @@ export const Menu = styled.div`
   align-items: center;
   font-size: 2rem;
   font-weight: 800;
+
+  .Link {
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 0;
+    margin: 0;
+    :hover {
+      background: rgba(0, 0, 0, 0.1);
+      a {
+        color: #fff;
+        text-decoration: underline 0.15em;
+        text-underline-offset: 0.2em;
+      }
+    }
+  }
 `;
 export const Navs = styled.div`
   margin: 0;
@@ -54,11 +71,5 @@ export const Navs = styled.div`
       text-decoration: underline 0.15em;
       text-underline-offset: 0.2em;
     }
-  }
-  .Link {
-    text-decoration: none;
-    color: var(--font-color);
-    padding: 0;
-    margin: 0;
   }
 `;
