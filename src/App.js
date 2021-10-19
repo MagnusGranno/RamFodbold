@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+// Styles
+import { GlobalStyle } from './GlobalStyle';
+// Routing
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// Components
 
-function App() {
+import MobileMenu from './components/MobileMenu';
+import MobileHome from './components/MobileHome';
+import Home from './components/Home';
+
+const App = () => {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const resize = () => {
+    setWidth(window.innerWidth);
+  };
+  window.addEventListener('resize', resize);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {width >= 768 ? <Home /> : <MobileHome />}
+      <GlobalStyle />
+    </Router>
   );
-}
+};
 
 export default App;
