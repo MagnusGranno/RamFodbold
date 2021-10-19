@@ -4,8 +4,7 @@ import { GlobalStyle } from './GlobalStyle';
 // Routing
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Components
-
-import MobileMenu from './components/MobileMenu';
+import Contact from './components/Contact';
 import MobileHome from './components/MobileHome';
 import Home from './components/Home';
 
@@ -18,7 +17,10 @@ const App = () => {
   window.addEventListener('resize', resize);
   return (
     <Router>
-      {width >= 768 ? <Home /> : <MobileHome />}
+      <Routes>
+        <Route path="/" element={width >= 768 ? <Home /> : <MobileHome />} />
+        <Route path="/kontakt" element={<Contact width={width} />} />
+      </Routes>
       <GlobalStyle />
     </Router>
   );

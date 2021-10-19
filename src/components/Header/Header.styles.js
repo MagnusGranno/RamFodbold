@@ -4,13 +4,14 @@ export const Wrapper = styled.div`
   background-color: var(--primary-color);
   height: 100px;
   width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  border-bottom-right-radius: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Content = styled.div`
   width: 100%;
+  max-width: 1440px;
   height: 100%;
   color: white;
   display: flex;
@@ -22,12 +23,18 @@ export const Logo = styled.div`
   font-size: var(--fontBig);
   width: 100%;
   text-align: start;
-  margin: 10px;
   cursor: pointer;
   text-shadow: 1px 2px 2px black;
   h1 {
     padding: 0;
     margin: 0;
+  }
+  Link {
+    color: var(--font-color);
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--fontMed);
   }
 `;
 
@@ -41,6 +48,7 @@ export const Menu = styled.div`
   font-size: var(--fontMed);
   font-weight: 800;
   padding-right: 20px;
+  text-shadow: 1px 2px 2px black;
 `;
 export const Navs = styled.div`
   display: flex;
@@ -66,5 +74,8 @@ export const Navs = styled.div`
       text-decoration: underline 0.15em;
       text-underline-offset: 0.2em;
     }
+  }
+  @media (max-width: 1000px) {
+    font-size: var(--fontMed);
   }
 `;

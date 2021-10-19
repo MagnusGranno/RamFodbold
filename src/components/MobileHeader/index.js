@@ -1,13 +1,19 @@
 import { useState } from 'react';
+// Styles
 import { Wrapper, Content, Logo, Burger } from './MobileHeader.styles';
+// Components
 import MobileMenu from '../MobileMenu';
+// Routing
+import { Link } from 'react-router-dom';
 
 const MobileHeader = ({ checked, setChecked }) => {
   return (
     <Wrapper>
       <Content>
         <Logo>
-          <h1>Ramløse Fodbold</h1>
+          <Link to="/" className="Link">
+            <h1>Ramløse Fodbold</h1>
+          </Link>
         </Logo>
 
         <Burger>

@@ -1,5 +1,8 @@
 import { Wrapper, Menu, Navs } from './MobileMenu.styles';
 
+// Routing
+import { Link } from 'react-router-dom';
+
 const MobileMenu = () => {
   return (
     <Wrapper>
@@ -7,14 +10,21 @@ const MobileMenu = () => {
         <Navs>
           <a>Hold</a>
         </Navs>
+
+        <Navs>
+          <Link to="/kontakt" className="Link">
+            <a>Kontakt</a>
+          </Link>
+        </Navs>
+
+        <Navs>
+          <a>Sponsorer</a>
+        </Navs>
         <Navs>
           <a>Log ind</a>
         </Navs>
         <Navs>
-          <a>Kontakt</a>
-        </Navs>
-        <Navs>
-          <a>Sponsorer</a>
+          <a>Register</a>
         </Navs>
       </Menu>
     </Wrapper>

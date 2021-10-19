@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   height: 85vh;
   max-width: 1280px;
   margin: 0 auto;
-
+  z-index: 1;
   animation: mobileMenuIn 1s;
 
   @keyframes mobileMenuIn {
@@ -54,5 +54,11 @@ export const Navs = styled.div`
       text-decoration: underline 0.15em;
       text-underline-offset: 0.2em;
     }
+  }
+  .Link {
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 0;
+    margin: 0;
   }
 `;

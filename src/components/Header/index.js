@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 // Styles
 import { Wrapper, Content, Logo, Menu, Navs } from './Header.styles';
 // Components
@@ -8,26 +9,37 @@ const Header = () => {
   return (
     <Wrapper>
       <Content>
-        <Logo
-          onClick={() => {
-            console.log(window.innerWidth);
-          }}
-        >
-          <h1>Ramløse Fodbold</h1>
+        <Logo>
+          <Link to="/" className="Link">
+            <h1>Ramløse Fodbold</h1>
+          </Link>
         </Logo>
         <Menu>
-          <Navs>
-            <a>Hold</a>
-          </Navs>
-          <Navs>
-            <a>Log ind</a>
-          </Navs>
-          <Navs>
-            <a>Kontakt</a>
-          </Navs>
-          <Navs>
-            <a>Sponsorer</a>
-          </Navs>
+          <Link to="/hold" className="Link">
+            <Navs>
+              <a>Hold</a>
+            </Navs>
+          </Link>
+          <Link to="/sponsorer" className="Link">
+            <Navs>
+              <a>Sponsorer</a>
+            </Navs>
+          </Link>
+          <Link to="/kontakt" className="Link">
+            <Navs>
+              <a>Kontakt</a>
+            </Navs>
+          </Link>
+          <Link to="/login" className="Link">
+            <Navs>
+              <a>Log ind</a>
+            </Navs>
+          </Link>
+          <Link to="/register" className="Link">
+            <Navs>
+              <a>Register</a>
+            </Navs>
+          </Link>
         </Menu>
       </Content>
     </Wrapper>
